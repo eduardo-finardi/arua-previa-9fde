@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quadriciclo a pedal Aruã | 21 marchas, freios a disco, na cor que você escolher</title>
+  <meta name="description" content="Quadriciclo a pedal Aruã: quatro rodas, 21 marchas e freios a disco. Entregue montado, na cor de sua preferência. Veja as cores e faça seu pedido.">
+  <meta property="og:title" content="Quadriciclo a pedal Aruã">
+  <meta property="og:description" content="Quatro rodas, 21 marchas, freios a disco. Entregue montado, na cor que você escolher.">
+  <meta property="og:image" content="img/quadriciclo-bau-vime.jpg">
+  <meta name="theme-color" content="#0F2A2B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="pular" href="#pedido">Ir direto para o pedido</a>
+
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Aruã, início">Aruã</a>
+    <nav class="topo-nav" aria-label="Seções">
+      <a href="#cores">Cores</a>
+      <a href="#video">Vídeo</a>
+      <a href="#detalhes">Detalhes</a>
+    </nav>
+    <a class="botao botao-pequeno" href="#pedido">Fazer pedido</a>
+  </header>
+
+  <main id="inicio">
+    <section class="abertura">
+      <h1>Quadriciclo<br>a pedal</h1>
+      <p class="abertura-texto">Quatro rodas, 21 marchas e freios a disco. Chega montado, pronto para pedalar, pintado na cor que você escolher.</p>
+    </section>
+
+    <section class="palco" id="cores" aria-label="Escolha a cor do quadro">
+      <div class="palco-foto">
+        <canvas id="tela" role="img" aria-label="Quadriciclo a pedal Aruã na cor laranja"></canvas>
+        <div class="vistas" role="group" aria-label="Modelo da foto">
+          <button type="button" class="vista" data-vista="vime" aria-pressed="true">Com baú de vime</button>
+          <button type="button" class="vista" data-vista="aramado" aria-pressed="false">Com cesto aramado</button>
+        </div>
+      </div>
+
+      <div class="doca">
+        <div class="doca-cores">
+          <p class="doca-titulo">Cor do quadro: <strong id="cor-nome">Laranja</strong></p>
+          <div class="chips" id="chips" role="radiogroup" aria-label="Cor do quadro"></div>
+          <p class="doca-nota">A pintura na foto é uma simulação. Quer outro tom? Diga no pedido.</p>
+        </div>
+        <div class="doca-acao">
+          <div class="valores">
+            <p class="preco" id="preco" hidden><span id="preco-valor"></span> <small id="preco-condicao"></small></p>
+            <p class="parcelas" id="parcelas" hidden></p>
+          </div>
+          <a class="botao" href="#pedido" id="pedir-nesta-cor">Pedir na cor laranja</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="detalhes" id="detalhes">
+      <h2>O que vem no seu quadriciclo</h2>
+      <dl class="ficha">
+        <div>
+          <dt>21 marchas</dt>
+          <dd>Câmbio para pegar leve na subida e render no plano.</dd>
+        </div>
+        <div>
+          <dt>Freios a disco</dt>
+          <dd>Frenagem firme, também com carga no baú.</dd>
+        </div>
+        <div>
+          <dt>Entregue montado</dt>
+          <dd>Sem caixa de peças nem manual: chega prontinho para rodar.</dd>
+        </div>
+        <div>
+          <dt>Quatro rodas</dt>
+          <dd>Fica em pé sozinho: você sobe, senta e sai pedalando, sem precisar se equilibrar.</dd>
+        </div>
+        <div>
+          <dt>Bagageiro traseiro</dt>
+          <dd>Baú de vime com tampa ou cesto aramado, para compras, praia ou o cachorro.</dd>
+        </div>
+        <div>
+          <dt>Até 12x no cartão</dt>
+          <dd>Pagamento parcelado pelo Mercado Pago, ou do jeito que combinarmos no WhatsApp.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="video" id="video">
+      <div class="video-texto">
+        <h2>Veja de perto</h2>
+        <p>Meio minuto de vídeo para ver o quadriciclo do jeito que ele é.</p>
+        <a class="botao botao-claro" href="#pedido">Quero o meu</a>
+      </div>
+      <video controls preload="metadata" playsinline poster="img/quadriciclo-cesto-aramado.jpg">
+        <source src="video/quadriciclo.mp4" type="video/mp4">
+        Seu navegador não toca este vídeo. <a href="video/quadriciclo.mp4">Baixe o vídeo</a>.
+      </video>
+    </section>
+
+    <section class="pedido" id="pedido">
+      <div class="pedido-cabeca">
+        <h2>Faça seu pedido</h2>
+        <p>Preencha e envie. O pedido abre no seu WhatsApp já escrito; a gente responde com prazo, frete e forma de pagamento.</p>
+      </div>
+
+      <form id="form-pedido" class="form" novalidate>
+        <div class="campo">
+          <label for="nome">Seu nome</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required>
+          <p class="erro" id="erro-nome" hidden>Escreva seu nome.</p>
+        </div>
+        <div class="campo">
+          <label for="fone">WhatsApp com DDD</label>
+          <input id="fone" name="fone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(13) 99999-8888" required>
+          <p class="erro" id="erro-fone" hidden>Informe o número com DDD, por exemplo (13) 99999-8888.</p>
+        </div>
+        <div class="campo">
+          <label for="cidade">Cidade e estado para entrega</label>
+          <input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Santos, SP" required>
+          <p class="erro" id="erro-cidade" hidden>Diga a cidade para calcularmos a entrega.</p>
+        </div>
+
+        <div class="linha">
+          <div class="campo">
+            <label for="cor">Cor do quadro</label>
+            <select id="cor" name="cor"></select>
+          </div>
+          <div class="campo campo-curto">
+            <label for="qtd">Quantidade</label>
+            <input id="qtd" name="qtd" type="number" min="1" max="20" value="1" inputmode="numeric">
+          </div>
+        </div>
+        <div class="campo" id="campo-outra-cor" hidden>
+          <label for="outra-cor">Qual cor você quer?</label>
+          <input id="outra-cor" name="outra-cor" type="text" placeholder="Ex.: azul-turquesa, verde-limão">
+          <p class="erro" id="erro-outra-cor" hidden>Escreva a cor que você quer.</p>
+        </div>
+
+        <fieldset class="campo opcoes">
+          <legend>Bagageiro traseiro</legend>
+          <label><input type="radio" name="bagageiro" value="Baú de vime" checked> Baú de vime</label>
+          <label><input type="radio" name="bagageiro" value="Cesto aramado"> Cesto aramado</label>
+        </fieldset>
+
+        <fieldset class="campo opcoes">
+          <legend>Como prefere pagar</legend>
+          <label><input type="radio" name="pagamento" value="Cartão em até 12x pelo Mercado Pago" checked> Cartão em até 12x (Mercado Pago)</label>
+          <label><input type="radio" name="pagamento" value="Pix"> Pix</label>
+          <label><input type="radio" name="pagamento" value="A combinar"> Combinar depois</label>
+        </fieldset>
+
+        <div class="campo">
+          <label for="obs">Observações <span class="opcional">(opcional)</span></label>
+          <textarea id="obs" name="obs" rows="3" placeholder="Dúvidas, melhor horário para contato"></textarea>
+        </div>
+
+        <button type="submit" class="botao botao-largo">Enviar pedido pelo WhatsApp</button>
+        <p class="aviso" id="aviso" role="status" hidden></p>
+        <a class="botao botao-largo botao-mp" id="pagar-mp" target="_blank" rel="noopener" hidden>Pagar pelo Mercado Pago</a>
+        <p class="form-nota">Seus dados vão só na mensagem do WhatsApp. Este site não guarda nada.</p>
+      </form>
+
+      <aside class="resumo" aria-label="Resumo do pedido">
+        <canvas id="miniatura" aria-hidden="true"></canvas>
+        <h3>Seu quadriciclo</h3>
+        <dl>
+          <div><dt>Cor</dt><dd id="resumo-cor">Laranja</dd></div>
+          <div><dt>Bagageiro</dt><dd id="resumo-bagageiro">Baú de vime</dd></div>
+          <div><dt>Quantidade</dt><dd id="resumo-qtd">1</dd></div>
+          <div><dt>Pagamento</dt><dd id="resumo-pagamento"></dd></div>
+          <div id="resumo-preco-linha" hidden><dt>Valor unitário</dt><dd id="resumo-preco"></dd></div>
+        </dl>
+        <p>21 marchas, freios a disco, entregue montado.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="marca">Aruã</p>
+    <p>Seu caminho, sua aventura.</p>
+    <nav class="redes" id="redes" aria-label="Redes sociais"></nav>
+    <a id="rodape-zap" href="#pedido">Falar no WhatsApp</a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
