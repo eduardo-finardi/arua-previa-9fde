@@ -284,7 +284,7 @@
   // ---------- Redes sociais (rodapé) ----------
   Object.keys(CFG.redes || {}).forEach(function (nome) {
     var url = (CFG.redes[nome] || "").trim();
-    if (!/^https?:///i.test(url)) return;
+    if (url.indexOf("https://") !== 0 && url.indexOf("http://") !== 0) return;
     var a = document.createElement("a");
     a.href = url; a.target = "_blank"; a.rel = "noopener";
     a.textContent = nome;
