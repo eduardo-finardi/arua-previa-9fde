@@ -8,6 +8,7 @@
   <meta property="og:title" content="Quadriciclo a pedal Aruã">
   <meta property="og:description" content="Quatro rodas, 21 marchas, freios a disco. Entregue montado, na cor que você escolher.">
   <meta property="og:image" content="img/quadriciclo-bau-vime.jpg">
+  <link rel="icon" href="img/logo-arua.png">
   <meta name="theme-color" content="#0F2A2B">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
   <a class="pular" href="#pedido">Ir direto para o pedido</a>
 
   <header class="topo">
-    <a class="marca" href="#inicio" aria-label="Aruã, início">Aruã</a>
+    <a class="logo-topo" href="#inicio" aria-label="Aruã, início"><img src="img/logo-arua.png" alt="Aruã" width="588" height="145"></a>
     <nav class="topo-nav" aria-label="Seções">
       <a href="#cores">Cores</a>
       <a href="#video">Vídeo</a>
@@ -29,6 +30,7 @@
 
   <main id="inicio">
     <section class="abertura">
+      <img class="logo-grande" src="img/logo-arua.png" alt="Aruã. Seu caminho, sua aventura" width="588" height="145">
       <h1>Quadriciclo<br>a pedal</h1>
       <p class="abertura-texto">Quatro rodas, 21 marchas e freios a disco. Chega montado, pronto para pedalar, pintado na cor que você escolher.</p>
     </section>
@@ -51,10 +53,19 @@
         <div class="doca-acao">
           <div class="valores">
             <p class="preco" id="preco" hidden><span id="preco-valor"></span> <small id="preco-condicao"></small></p>
-            <p class="parcelas" id="parcelas" hidden></p>
+            <p class="parcelas" id="parcelas" hidden><strong class="js-vezes"></strong> <span class="js-parcelas-texto"></span></p>
           </div>
           <a class="botao" href="#pedido" id="pedir-nesta-cor">Pedir na cor laranja</a>
         </div>
+      </div>
+    </section>
+
+    <section class="faixa-12x" id="parcelamento" hidden>
+      <p class="faixa-12x-numero"><span>Em até</span> <strong class="js-vezes"></strong></p>
+      <div class="faixa-12x-texto">
+        <h2 class="js-parcelas-texto"></h2>
+        <p>Você parcela a compra no cartão de crédito com a segurança do Mercado Pago. Prefere Pix ou outra forma? A gente combina no WhatsApp.</p>
+        <a class="botao botao-claro" href="#pedido">Fazer pedido parcelado</a>
       </div>
     </section>
 
@@ -179,8 +190,7 @@
   </main>
 
   <footer class="rodape">
-    <p class="marca">Aruã</p>
-    <p>Seu caminho, sua aventura.</p>
+    <img class="logo-rodape" src="img/logo-arua.png" alt="Aruã. Seu caminho, sua aventura" width="588" height="145" loading="lazy">
     <nav class="redes" id="redes" aria-label="Redes sociais"></nav>
     <a id="rodape-zap" href="#pedido">Falar no WhatsApp</a>
   </footer>
