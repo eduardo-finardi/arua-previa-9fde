@@ -9,8 +9,9 @@ window.ARUA = {
   // Texto curto ao lado do preço. Ex.: "à vista no Pix" ou "em até 10x no cartão"
   condicao: "",
 
-  // Parcelamento anunciado no site.
-  parcelas: "Em até 12x no cartão pelo Mercado Pago",
+  // Parcelamento anunciado no site. Deixe parcelasVezes "" para esconder.
+  parcelasVezes: "12x",
+  parcelasTexto: "no cartão, pelo Mercado Pago",
 
   // Link de pagamento do Mercado Pago (opcional). Se preenchido, aparece o botão
   // "Pagar pelo Mercado Pago" depois que o pedido é enviado. Ex.: "https://mpago.la/xxxx"

@@ -271,9 +271,11 @@
     $("resumo-preco-linha").hidden = false;
     $("resumo-preco").textContent = CFG.preco;
   }
-  if (CFG.parcelas) {
+  if (CFG.parcelasVezes) {
     $("parcelas").hidden = false;
-    $("parcelas").textContent = CFG.parcelas;
+    $("parcelamento").hidden = false;
+    Array.prototype.forEach.call(document.querySelectorAll(".js-vezes"), function (e) { e.textContent = CFG.parcelasVezes; });
+    Array.prototype.forEach.call(document.querySelectorAll(".js-parcelas-texto"), function (e) { e.textContent = CFG.parcelasTexto || ""; });
   }
   if (zap) {
     var r = $("rodape-zap");
